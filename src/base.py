@@ -34,6 +34,8 @@ class peopleChart(base):
     adress = None
     company = None
     phone = None
+    invoiveIDs = []                         #Generated contents: [InvoiceID, ...]
+    communicationIDs = []                   #Generated contents: [CommunicationID, ...]
     
     def __init__(self, name, forename, email):
         self.name = name
@@ -54,6 +56,8 @@ class peopleChart(base):
         # Depends on variable conversationID
         pass
 
+    def export2vCard(self):
+        pass
 
 '''
 Class dedicated for invoices
@@ -97,6 +101,7 @@ class communicationChart(base):
     conversationID = None
     flag = []
     archived = False
+    communicationID = None
     
     def __init__(self, date, subject, category, coupledPeopleID):
         self.date = date
